@@ -7,7 +7,7 @@ cd ~/ros2_ws
 
 source install/local_setup.bash
 
-CLI TOOLS: 
+### CLI TOOLS: 
 
 - **Running turtlesim**
 
@@ -42,8 +42,8 @@ add -t to get topic type
 ex: ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}”
 
 - the removal of the `--once` option and the addition of the `--rate 1` option, which tells `ros2 topic pub` to publish the command in a steady stream at 1 Hz.
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/22070d12-60c4-4b75-97f7-818198ddc78f/d45aa6ca-2431-4e86-8857-1dd92f3710b5/Untitled.png)
+  
+![image](https://github.com/adithi-su/ROS2/assets/63908022/b6edcdd0-93d6-4dca-b81f-0c759851809d)
 
 The graph is depicting how the `/turtlesim` node and the `/teleop_turtle` node are communicating with each other over a topic. The `/teleop_turtle` node is publishing data (the keystrokes you enter to move the turtle around) to the `/turtle1/cmd_vel` topic, and the `/turtlesim` node is subscribed to that topic to receive the data.
 
@@ -59,14 +59,14 @@ The graph is depicting how the `/turtlesim` node and the `/teleop_turtle` no
 
 (optional: <arguments>)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/22070d12-60c4-4b75-97f7-818198ddc78f/2607b3de-c1a0-4698-9a8e-e7b3f8fe3463/Untitled.png)
+![image](https://github.com/adithi-su/ROS2/assets/63908022/cb8effae-a5da-4e98-aaf5-7131c02bbfb0)
 
 **Parameters:**
 
 - ros2 param list
 - Every node has the parameter `use_sim_time`; it’s not unique to turtlesim.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/22070d12-60c4-4b75-97f7-818198ddc78f/5fba7424-e217-4394-83b1-4a1bda0fcf93/Untitled.png)
+![image](https://github.com/adithi-su/ROS2/assets/63908022/ed0c1a4f-1358-41d6-86c2-8da88894ffd8)
 
 `/turtlesim`’s parameters determine the background color of the turtlesim window using RGB color values.
 
@@ -89,7 +89,7 @@ The graph is depicting how the `/turtlesim` node and the `/teleop_turtle` no
 
 `<values>` need to be in YAML format.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/22070d12-60c4-4b75-97f7-818198ddc78f/2a7bf76b-07c1-4160-b889-43674cfa2fc1/Untitled.png)
+![image](https://github.com/adithi-su/ROS2/assets/63908022/83dc3432-0809-4a8e-ae9d-88a4c39cbc5e)
 
 **Using CLI to launch multiple nodes at once**
 
@@ -119,7 +119,7 @@ structure:
 
 Deprecated packages and their replacements:
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/22070d12-60c4-4b75-97f7-818198ddc78f/ce951c70-7810-41cf-82d6-2e0d4da16d87/Untitled.png)
+![image](https://github.com/adithi-su/ROS2/assets/63908022/a7d1aff1-a0da-437b-9b91-a7436a14897f)
 
 colcon build --symlink-install
 
